@@ -40,7 +40,7 @@ Bot Discord.js v14 Multiverse adalah sebuah bot Discord yang dikembangkan menggu
 
 - **Guild Member Remove**: Menginformasikan saat anggota meninggalkan server.
 
----
+---```
 
 
 ## Persyaratan
