@@ -1,6 +1,4 @@
 
-
-```markdown
 # Bot Discord.js v14 Multiverse
 
 Bot Discord.js v14 Multiverse adalah sebuah bot Discord yang dikembangkan menggunakan Discord.js versi 14. Bot ini memiliki fitur-fitur yang berguna untuk memoderasi dan menghibur server Discord.
@@ -11,6 +9,7 @@ Bot Discord.js v14 Multiverse adalah sebuah bot Discord yang dikembangkan menggu
 
 Bot Discord.js v14 Multiverse adalah sebuah bot Discord yang dikembangkan menggunakan Discord.js versi 14. Bot ini memiliki berbagai fitur dan command yang berguna untuk memoderasi, memberikan informasi, dan menghibur server Discord.
 
+```markdown
 # Fitur Utama
 
 - **Administrator**: Memiliki perintah-perintah untuk mengatur fitur-fitur administratif di server, seperti autoquote, autoreact message, autorole, take role game dan umum, setprefix, dan verify.
