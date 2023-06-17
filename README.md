@@ -1,4 +1,4 @@
-Tentu! Berikut contoh README.md untuk bot Discord.js v14 Multiverse:
+
 
 ```markdown
 # Bot Discord.js v14 Multiverse
