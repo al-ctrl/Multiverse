@@ -13,7 +13,8 @@ const create_mh = (array) => {
         administrator: "⚙️",
         umum: "✨",
         owner: "⭕️",
-        user: "☂️"
+        user: "☂️",
+        nfsw: "💕"
     }
     
     array.forEach(cca => {
