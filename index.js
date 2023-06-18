@@ -40,7 +40,7 @@ client.categories = fs.readdirSync("./commands/");
   require(`./handlers/${handler}`)(client);
 });
 
-ultrax.boost.start(client, '1055523295321133116')
+ultrax.boost.start(client, '')
 
 client.on('boost', async booster => {
 
@@ -48,12 +48,12 @@ client.on('boost', async booster => {
     .setTitle(booster.user.tag)
     .setImage('https://media.discordapp.net/attachments/1055692690613870734/1055711212891013170/b49bdfa828cc3364.jpg?width=847&height=282')
     .setDescription(`
-      𝐎𝐤𝐢𝐢𝐧𝐚𝐰𝐚'𝐬 𝐂𝐚𝐛𝐢𝐧 𝐇𝐚𝐬 𝐁𝐞𝐞𝐧 𝐛𝐨𝐨𝐬𝐭𝐞𝐝\n\n Thank you ${booster}, murah rejeki dan sehat selalu yaa <3\n
+      ${guild}\n\n Thank you ${booster}, murah rejeki dan sehat selalu yaa <3\n
 ────────────────────
 `)
     .setThumbnail(booster.user.displayAvatarURL())
 
-  await booster.guild.channels.cache.get('1055508385170194552').send({
+  await booster.guild.channels.cache.get('').send({
     content: `Haiii Terima kasih ${booster}`,
     embeds: [embed]
   })
