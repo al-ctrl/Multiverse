@@ -1,44 +1,30 @@
-const { SlashCommandBuilder } = require("@discordjs/builders")
-const { MessageActionRow, Modal, TextInputComponent } = require('discord.js');
+const { MessageEmbed, Message } = require('discord.js');
 
 module.exports = {
-  data: new SlashCommandBuilder()
-    .setName("embed")
-    .setDescription("Membuat pesan embed menggunakan modal"),
-  run: async (interaction) => {
+  name: "embed",
+  category: "moderation",
+  description: "Membuat kata kata dengan embed",
 
-  const modal = new Modal()
-  .setTitle("Create Embed")
-  .setCustomId("embed")
-  .addComponents(
-    new MessageActionRow({
-      components: [
-        new TextInputComponent()
-        .setCustomId("title")
-        .setLabel("harusnya judulnya apa?")
-        .setPlaceholder("judul cheesy dari embed (opsional)")
-        .setStyle("SHORT")
-      ]
-    }),
-    new MessageActionRow({
-      Components: [
-        new TextInputComponent()
-        .setCustomId("Deskripsi")
-        .setLabel("harusnya Deskripsi apa?")
-        .setPlaceholder("judul embed yang menarik (opsional)")
-        .setStyle("PARAGRAPH")
-      ]
-    }),
-    new MessageActionRow({
-      Components: [
-        new TextInputComponent()
-        .setCustomId("Colors")
-        .setLabel("harusnya Warna apa?")
-        .setPlaceholder("Hex kode warna (opsional)")
-        .setStyle("SHORT")
-        ]
-    })
-  )
-  return interaction.showModal(modal)
+  run: async (client, message, args) => {
+    try {
+      if (!args.length && message.attachments.size === 0)
+      return message.reply("Mohon Masukan Kata-kata atau Unggah Gambar yang akan di Embed!");
+    message.delete({ timeout: 1000 });
+
+    const embed = new MessageEmbed();
+    if (args.length > 0)
+    embed.setDescription(args.join(" "));
+
+    if (message.attachments.size > 0) {
+      const attachments = message.attachments.first();
+
+      if (attachments && attachments.url) {
+        embed.setImage(attachments.url);
+      }
+    }
+    message.channel.send({ embeds: [embed] });
+    } catch (e) {
+      throw e;
+    }
   }
-}
+};

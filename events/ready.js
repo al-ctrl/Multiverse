@@ -1,6 +1,6 @@
 const client = require("../index.js");
 const activities = [
-{ name: 'YOUR SERVER', type: 'STREAMING' }, 
+{ name: 'lhelp', type: 'STREAMING' }, 
 { name: '🎶 Music', type: 'LISTENING' }
 ];
 client.on('ready', () => {

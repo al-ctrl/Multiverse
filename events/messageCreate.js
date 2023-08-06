@@ -34,6 +34,8 @@ client.on('messageCreate', async (message) => {
         message.reply(`https://tenor.com/view/thor-dildo-avenger-gif-10396569`)
       } else if (message.content.includes(`<@692004698869203056>`)) {
         message.reply(`https://tenor.com/view/what-cute-cat-stare-gif-17200625`);
+      } else if (message.content.includes(`<@1125398914724540477`)) {
+        message.reply("prefix saya adalah **l** dan ketik **lhelp** untuk menemukan apa yang ingin anda ketahui tentang akoehhh <3")
       }
     }
 });

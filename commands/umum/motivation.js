@@ -1,5 +1,5 @@
-const { MessageEmbed } = require('discord.js');
-const jsonQuotes = require('../../JSON/motivational.json');
+/*const { MessageEmbed } = require('discord.js');
+const jsonQuotes = require('../../motivational.json');
 
 module.exports = {
   data: {
@@ -32,4 +32,4 @@ module.exports = {
 
     interaction.reply({ embeds: [quoteEmbed] });
   }
-};
+};*/
