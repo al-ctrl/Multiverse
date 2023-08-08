@@ -2,6 +2,8 @@ const client = require('../index.js')
 const db = require("quick.db")
 
 client.on('messageCreate', async (message) => {
+if (message.author.bot) return // pengecualian pesan dari bot
+
   if (message.partial) await message.fetch();
 
   const emoji = await db.get(`autoReactEmoji-${message.guild.id}`);
